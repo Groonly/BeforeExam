@@ -18,7 +18,6 @@ DEBUG = -g
 CFLAGS = -c -Wall $(DEBUG)
 LFLAGS = -Wall
 
-all: test run
 
 test: $(OBJECTS)
 	$(CC) $(LFLAGS) $(OBJECTS) -o MathTest
@@ -26,6 +25,7 @@ test: $(OBJECTS)
 %.o:%.c $(HEADERS)
 	$(CC) $(CFLAGS) $(SOURCES)
 
+	all: test run
 
 clean:
 	rm $(OBJECTS)

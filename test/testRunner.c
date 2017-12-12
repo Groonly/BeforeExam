@@ -2,6 +2,7 @@
 
 TEST_GROUP_RUNNER(Math)
 {
-  RUN_TEST_CASE(Math, Addtion);
-
+  RUN_TEST_CASE(Math, AdditionPositivInt);
+  RUN_TEST_CASE(Math, AdditionNegativeInt);
+  RUN_TEST_CASE(Math, SubtractionPositivInt); 
 }
