@@ -20,15 +20,16 @@ LFLAGS = -Wall
 
 
 test: $(OBJECTS)
-	$(CC) $(LFLAGS) $(OBJECTS) -o MathTest
+	$(CC) $(LFLAGS) $^ -o $@
 
 %.o:%.c $(HEADERS)
 	$(CC) $(CFLAGS) $(SOURCES)
 
-	all: test run
+all: test run
 
 clean:
 	rm $(OBJECTS)
+	rm test.exe
 
 run:
-	./Mathtest.exe
+	./test.exe
